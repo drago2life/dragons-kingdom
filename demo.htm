@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html><head>
+
+
+			<script language='javascript' src='http://127.0.0.1:1026/js.cgi?ca&r=30693'></script>
+
+<script>
+function popUp(url){
+	window.open(url,"pop","width=650,height=380,toolbars=0,scrollbars=1")
+}
+
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=400,height=300');");
+}
+
+</script>
+
+<META NAME="Title" CONTENT="Welcome to Dragons Kingdom - An online browser based RPG!">
+<META NAME="Author" CONTENT="Adam Dear">
+<META NAME="Subject" CONTENT="Dragons Kingdom Online Game">
+<META NAME="Description" CONTENT="An online browser based text RPG!">
+<META NAME="Keywords" CONTENT="dragon, dragons, kingdom, rpg, role, playing, online game, strategy, multiplayer, adventure, game, text game, browser based game, browser, forums, forum, game forum, paladin, sorceress, barbarian, druid, ranger, assassin, fun, medievil, old english, horse, blacksmith, knight, rsbattle, runescape">
+<META NAME="Language" CONTENT="English">
+<META NAME="Copyright" CONTENT="Copyright - 2004 - 2005 Dragon's Kingdom">
+<META NAME="Designer" CONTENT="Adam Dear">
+<META NAME="Publisher" CONTENT="Adam Dear">
+<META NAME="Revisit-After" CONTENT="7 Days">
+<META NAME="Distribution" CONTENT="Global">
+<META NAME="Robots" CONTENT="Index">
+<link rel="shortcut icon" href="images/fav.ico" type="image/x-icon" />
+
+<title>Kingdom Of Valour</title>
+<style type="text/css">
+
+body {
+  background-image: url(images/background.jpg);
+  color: #000000;
+  font: 10px verdana;
+}
+table {
+  border-style: none;
+  padding: 0px;
+  font: 10px verdana;
+}
+td {
+  border-style: none;
+  padding: 3px;
+  vertical-align: top;
+}
+td.top {
+  border-bottom: solid 2px black;
+}
+td.left {
+  width: 180px;
+  border-right: solid 2px black;
+}
+td.right {
+  width: 180px;
+  border-left: solid 2px black;
+}
+a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: #afafaf;
+}
+ 
+a.done:link, a.done:hover, a.done:visited{
+    background-color: transparent;
+	color: #999999;
+	text-decoration: none; 
+}
+.small {
+  font: 9px verdana;
+}
+.highlight {
+  color: red;
+}
+.news {
+  font: 12px verdana;
+  font-weight: bold;
+  color: #336666;  
+}
+.profile {
+  font: 9px verdana;
+  font-weight: none;
+  color: #000000;  
+}
+.light {
+  color: #336666;
+  
+}
+.title {
+  border: solid 1px black;
+  background-color: #999999;
+  font-weight: bold;
+  padding: 4px;
+  margin: 3px;
+}
+.copyright {
+  border: solid 1px black;
+  background-color: #999999;
+  font: 9px verdana;
+}
+</style>
+
+<script>
+var compassy = 0;
+var mining = 0;
+
+function openmappopup()
+{
+    var popurl="index.php?do=showmap";
+    winpops=window.open(popurl,"","width=650,height=635,scrollbars");
+}
+
+function move() {
+    document.compass.direction.click();
+}
+
+function setdir(dir) {
+    if (document.compass.direction.disabled)
+	document.compass.direction.disabled = false;
+    document.compass.direction.value=dir;
+}
+
+function getkey(e) {
+    if (compassy != 1 || document.forms.length != 3) 
+	return;
+
+    var pK = e ? e.which:window.event.keyCode;
+    switch (pK) {
+	case 56:
+	    dir="North";
+	    break;
+	case 54:
+	    dir="East";
+	    break;
+	case 50:
+	    dir="South";
+	    break;
+	case 52:
+	    dir="West";
+	    break;
+	case 55:
+	    dir="North West";
+	    break;
+	case 57:
+	    dir="North East";
+	    break;
+	case 51:
+	    dir="South East";
+	    break;
+	case 49:
+	    dir="South West";
+	    break;
+	default:
+	    dir=false;
+	    break;
+    }
+if (dir) {
+  setdir(dir);
+  move();
+}}
+
+// Compass
+
+function carrot() {
+if (compassy == 1)
+{document.getElementById('compassdiv').style.visibility = "hidden";
+document.getElementById('warningdiv').innerHTML = "Compass hidden to prevent Power Clicking and reduce Server Load.";
+document.getElementById('warningdiv').style.visibility = "visible";
+compassy++;
+}else{setTimeout("anticarrot()",600);}
+}
+function anticarrot() {
+document.getElementById('compassdiv').style.visibility = "visible";
+document.getElementById('warningdiv').style.visibility = "hidden";
+compassy++}
+
+function carrot2(tag) {  
+	  document.getElementById(tag).style.visibility = 'hidden';  
+}
+
+function hide(tag) {  
+	  document.getElementById(tag).style.visibility = 'hidden';
+	  document.getElementById(tag+"div").style.visibility = "visible";
+	  setTimeout("antihide('"+tag+"')",2000); 
+    
+}
+
+function antihide(tag) {
+    document.getElementById(tag).style.visibility = 'visible';  
+    document.getElementById(tag+"div").style.visibility = 'hidden';
+} 
+
+document.onkeypress = getkey;
+</script>
+</head>
+<body onload="carrot();"><center>
+
+<table cellspacing="0" width="90%"><tr>
+<td class="top" colspan="3">
+  <center><table width="100%"><tr><td><center><img src="images/logo.gif" alt="Dragon's Kingdom" title="Dragon's Kingdom" border="0" /><br></center></td><td style="text-align:right; vertical-align:middle;"></td></tr></table>
+</td>
+</tr><tr>
+<td rowspan="2" class="left"><table width="100%">
+<tr><td class="title"><img src="images/button_character.gif" alt="Character" title="Character" /></td></tr>
+<tr>
+  <td>
+<font color=#336666><b>Demo Character</b></font><br />
+Level: 5<br />
+Gold: 9,999,999,999<br />
+Dragon Scales: 99,999<br />
+Stored Gold: 9,999,999<br />
+Guild: -<br /><br />
+Experience: 0 <br />
+Mining Exp: 0 <br />
+Smelting Exp: 0 <br />
+Forging Exp: 0 <br />
+Endurance Exp: 0 <br />
+Crafting Exp: 0<br />
+  Total Exp: 0<br />
+    Skill Total: 15<br />
+    Attributes: 84 - <a href="#">Spend</a><br />
+    <br />
+<center>
+<table width="150"><tr><td width="150%">
+<table cellspacing="0" cellpadding="0"><tr><td style="padding:0px; width:150px; height:5px; border:solid 1px black; vertical-align:bottom;">
+<div style="padding:0px; width:120px; border-top:solid 1px black; background-image:url(images/bars_green.gif);"><img src="images/bars_green.gif" alt="" /></div></tr><tr><td>HP: 12 / 15</td></tr></table>
+<table cellspacing="0" cellpadding="0"><tr><td style="padding:0px; width:150px; height:5px; border:solid 1px black; vertical-align:bottom;">
+<div style="padding:0px; width:0px; border-top:solid 1px black; background-image:url(images/bars_blue.gif);"><img src="images/bars_blue.gif" alt="" /></div></tr><tr><td>MP: <blink><span class="highlight"><b>*0*</b></span></blink> / 0</td></tr></table>
+<table cellspacing="0" cellpadding="0"><tr><td style="padding:0px; width:150px; height:5px; border:solid 1px black; vertical-align:bottom;">
+<div style="padding:0px; width:150px; border-top:solid 1px black; background-image:url(images/bars_orange.gif);"><img src="images/bars_orange.gif" alt="" /></div></tr><tr><td>TP: 5 / 5</td></tr></table>
+<table cellspacing="0" cellpadding="0"><tr><td style="padding:0px; width:150px; height:5px; border:solid 1px black; vertical-align:bottom;">
+<div style="padding:0px; width:150px; border-top:solid 1px black; background-image:url(images/bars_purple.gif);"><img src="images/bars_purple.gif" alt="" /></div></tr><tr><td>AP: 6 / 6</td></tr></table>
+<table cellspacing="0" cellpadding="0"><tr><td style="padding:0px; width:150px; height:5px; border:solid 1px black; vertical-align:bottom;">
+<div style="padding:0px; width:24px; border-top:solid 1px black; background-image:url(images/bars_yellow.gif);"><img src="images/bars_yellow.gif" alt="" /></div></tr><tr><td>Fatigue: 16% / 100%</td></tr></table>
+<table cellspacing="0" cellpadding="0"><tr><td style="padding:0px; width:150px; height:5px; border:solid 1px black; vertical-align:bottom;">
+<div style="padding:0px; width:-216px; border-top:solid 1px black; background-image:url(images/bars_black.gif);"><img src="images/bars_black.gif" alt="" /></div></tr><tr><td>Exp: 0 / 330<p><center>
+  View: <a href='#'>Profile</a> - <a href='#'>Pets</a><br>
+  <a href='#'>Backpack</a>
+</center></td></tr></table></table>
+</center>
+</td></tr>
+</table>
+<br />
+<table width="100%">
+<tr><td class="title"><img src="images/button_fastitems.gif" alt="Quick Items" title="Quick Items" /></td></tr>
+<tr><td>
+<center><a href="#">View All</a>
+<p></center>
+<a href="#">New Player Potion</a><br />
+<a href="#">Regeneration Pearl</a><br />
+<a href="#">Elixir</a><br />
+<a href="#">Lifespring Gem</a><br />
+<a href="#">Bronze Plaque</a><br />
+<a href="#">Desert Tent</a><br />
+</td></tr>
+</table><br />
+<table width="100%">
+<tr><td class="title"><img src="images/button_menu.gif" alt="Main Menu" title="Main Menu" /></td></tr>
+<tr>
+  <td><br>
+
+
+<DL>
+<IMG SRC="images/icon_arrow.gif" ALT="Latest News"> <a href="#">Latest News</a> - <a href="#">Archive</a><br />
+<IMG SRC="images/icon_arrow.gif" ALT="Game Mail"> <a href="#">Game Mail</a><font color=red><b> (0)</b></font><br />
+<IMG SRC="images/icon_arrow.gif" ALT="Whos Online"> <a href="#">Who is Online</a> <b>(301)</b><br />
+<IMG SRC="images/icon_arrow.gif" ALT="DK Rules"> <a href="#">DK Rules</a><br />
+<IMG SRC="images/icon_arrow.gif" ALT="Game Forums"> <a href="#">Game Forums</a><br />
+<p>
+<IMG SRC="images/icon_arrow.gif" ALT="Help Guide"> <a href="#" target="_blank">Help Guide</a> <br />
+<IMG SRC="images/icon_arrow.gif" ALT="Contact Support"> <a href="#">Contact Support</a><br />
+<IMG SRC="images/icon_arrow.gif" ALT="Online Store"> <a href="#">Online Store</a><br />
+
+<IMG SRC="images/icon_arrow.gif" ALT="View Polls"> <a href="#">View Polls</a><br />
+<IMG SRC="images/icon_arrow.gif" ALT="Player Options"> <a href="#">Player Options</a><br />
+<IMG SRC="images/icon_arrow.gif" ALT="Log Out"> <a href="#">Log Out</a>
+</DL></td></tr>
+</table>
+
+</td>
+<td class="middle"><table width="100%">
+<tr>
+  <td colspan="3" class="title"><img src="images/town_1.gif" alt="Welcome to Kingdom Of Valour" title="Welcome to Kingdom Of Valour" /></td>
+  </tr>
+<tr>
+  <td colspan="3"><p>The heart of the wilderness, a large and bustling city stands tall. Towers and bastions decorate the ramparts, and a solid portcullis guards the inner city from monsters. This is the Kingdom of Valour, the place where your journey begins.
+    <p>You see the town square in the distance, amongst many other areas:</p></td>
+  </tr>
+<tr>
+  <td width="69%"><UL>
+  <br />  <IMG SRC="images/icon_arrow.gif"> 
+    <a href="#">Kingdom Of Valour Town Square</a>
+      <br />  
+      <IMG SRC="images/icon_arrow.gif">   
+    <a href="#">Player Market</a>
+  <br />  
+  <IMG SRC="images/icon_arrow.gif">   
+    <a href="#">Skill Shrine</a>
+  <br />  
+  <IMG SRC="images/icon_arrow.gif">   
+    <a href="#">Duel Arena</a>
+   <br /> 
+   <IMG SRC="images/icon_arrow.gif">  
+    <a href="#">Gambling Den</a>
+   <br /> 
+   <IMG SRC="images/icon_arrow.gif">   
+    <a href="#">Guild Courtyard</a>
+   <br /> 
+   <IMG SRC="images/icon_arrow.gif">  
+    <a href="#">Quest Tower</a>
+   <br /> 
+   <IMG SRC="images/icon_arrow.gif">   
+    <a href="#">Temple of Rebirth</a>
+   <br /> 
+   <IMG SRC="images/icon_arrow.gif">  
+    <a href="#">Hall of Fame</a>
+  </UL></td>
+  <td width="23%"><img src="images/towns/1.gif" alt="Kingdom Of Valour" align="left" title="Kingdom Of Valour" /></td>
+  <td width="8%">&nbsp;</td>
+</tr>
+<tr>
+  <td colspan="3"><UL>
+   <br /> <IMG SRC="images/icon_arrow.gif">   
+    <a href="#">Daily Bonus Arena</a>
+  </UL>
+    <!--<br /><IMG SRC="images/icon_arrow.gif"> <a href="search.php">Daily Bonus Arena</a>//--><br><p><p><center><table width="85%"><tr><td style="padding:1px; background-color:black;"><table width="100%" style="margins:0px;" cellspacing="1" cellpadding="3"><tr><th colspan="5" style="background-color:#dddddd;"><center>Recently Visited Players in Town - In order of Level</center></th></tr><tr><th width="1%" style="background-color:#dddddd;">Character Name</th><th width="5%" style="background-color:#dddddd;">Location</th><th width="2%" style="background-color:#dddddd;">Level</th><th  width="10%" style="background-color:#dddddd;">Attack</th><th  width="10%" style="background-color:#dddddd;">Mug</th></tr><tr><td bgcolor='#eeeeee' width='15%'><a href="#">Gazza</a></td>
+    <td bgcolor='#eeeeee' width='5%'>0N, 0E</td><td bgcolor='#eeeeee' width='5%'>81</td><td bgcolor='#eeeeee' width='5%'><a href='#'>Request</a></td>
+    <td bgcolor='#eeeeee' width='12%'><font color=green>Safe Zone</font></td></tr><tr><td bgcolor='#ffffff' width='15%'><a href="#">Sestock</a></td>
+    <td bgcolor='#ffffff' width='5%'>0N, 0E</td><td bgcolor='#ffffff' width='5%'>52</td><td bgcolor='#ffffff' width='5%'><a href='#'>Request</a></td>
+    <td bgcolor='#ffffff' width='12%'><font color=green>Safe Zone</font></td></tr><tr><td bgcolor='#eeeeee' width='15%'><a href="#">Nexulliis</a></td>
+    <td bgcolor='#eeeeee' width='5%'>0N, 0E</td><td bgcolor='#eeeeee' width='5%'>51</td><td bgcolor='#eeeeee' width='5%'><a href='#'>Request</a></td>
+    <td bgcolor='#eeeeee' width='12%'><font color=green>Safe Zone</font></td></tr><tr><td bgcolor='#ffffff' width='15%'><a href="#">VampireGod</a></td>
+    <td bgcolor='#ffffff' width='5%'>0N, 0E</td><td bgcolor='#ffffff' width='5%'>51</td><td bgcolor='#ffffff' width='5%'><a href='#'>Request</a></td>
+    <td bgcolor='#ffffff' width='12%'><font color=green>Safe Zone</font></td></tr><tr><td bgcolor='#eeeeee' width='15%'><a href="#">blaze_mage_inferno</a></td>
+    <td bgcolor='#eeeeee' width='5%'>0N, 0E</td><td bgcolor='#eeeeee' width='5%'>45</td><td bgcolor='#eeeeee' width='5%'><font color=blue>Idle</font></td><td bgcolor='#eeeeee' width='12%'><font color=green>Safe Zone</font></td></tr><tr><td bgcolor='#ffffff' width='15%'><a href="#">DragonMage</a></td>
+    <td bgcolor='#ffffff' width='5%'>0N, 0E</td><td bgcolor='#ffffff' width='5%'>42</td><td bgcolor='#ffffff' width='5%'><font color=blue>Idle</font></td><td bgcolor='#ffffff' width='12%'><font color=green>Safe Zone</font></td></tr><tr><td bgcolor='#eeeeee' width='15%'><a href="#">Everfire</a></td>
+    <td bgcolor='#eeeeee' width='5%'>0N, 0E</td><td bgcolor='#eeeeee' width='5%'>30</td><td bgcolor='#eeeeee' width='5%'><a href='#'>Request</a></td>
+    <td bgcolor='#eeeeee' width='12%'><font color=green>Safe Zone</font></td></tr><tr><td bgcolor='#ffffff' width='15%'><a href="#">Maske</a></td>
+    <td bgcolor='#ffffff' width='5%'>0N, 0E</td><td bgcolor='#ffffff' width='5%'>30</td><td bgcolor='#ffffff' width='5%'><a href='#'>Request</a></td>
+    <td bgcolor='#ffffff' width='12%'><font color=green>Safe Zone</font></td></tr><tr><td bgcolor='#eeeeee' width='15%'><a href="#">Enabran</a></td>
+    <td bgcolor='#eeeeee' width='5%'>0N, 0E</td><td bgcolor='#eeeeee' width='5%'>29</td><td bgcolor='#eeeeee' width='5%'><font color=blue>Idle</font></td><td bgcolor='#eeeeee' width='12%'><font color=green>Safe Zone</font></td></tr><tr><td bgcolor='#ffffff' width='15%'><a href="#">kill</a></td>
+    <td bgcolor='#ffffff' width='5%'>0N, 0E</td><td bgcolor='#ffffff' width='5%'>22</td><td bgcolor='#ffffff' width='5%'><a href='#'>Request</a></td>
+    <td bgcolor='#ffffff' width='12%'><font color=green>Safe Zone</font></td></tr><tr><td bgcolor='#eeeeee' width='15%'><a href="#">Phearless</a></td>
+    <td bgcolor='#eeeeee' width='5%'>0N, 0E</td><td bgcolor='#eeeeee' width='5%'>1</td><td bgcolor='#eeeeee' width='5%'><a href='#'>Request</a></td>
+    <td bgcolor='#eeeeee' width='12%'><font color=green>Safe Zone</font></td></tr></table></table></center></td>
+  </tr>
+<tr>
+  <td colspan="3">
+      <br />
+  <table width="100%">
+    <tr><td width="50%">
+    </td><td>
+    </td></tr>
+    </table></td>
+  </tr>
+</table>
+
+<p>
+<br></td>
+</p></td>
+<td rowspan="2" class="right"><table width="100%">
+<tr><td class="title"><img src="images/button_location.gif" alt="Location" title="Location" /></td></tr>
+<tr><td>
+Currently: Kingdom Of Valour<br />
+Latitude: 0N<br />
+Longitude: 0E<br />
+Zone: <font color=green><b>Safe Zone</b></font><br />
+Home Location: 400N, 100E</a><br />
+
+Movement: Walking<br />
+<a href="#">View Battle Field Map</a><br />
+<br />
+<center>
+<div id="compassdiv" style="visibility: hidden">
+<img usemap="#direction" src="images/compass.gif" border="0"/>
+<map name="direction">
+  <area shape="poly" alt="Move North West" onclick="move()" onmouseover="setdir('North West')" title="Move North West" coords="63,61,36,5,5,5,5,39" />
+  <area shape="poly" alt="Move South West" onclick="move()" onmouseover="setdir('South West')" title="Move South West" coords="64,65,41,124,5,124,5,91" />
+  <area shape="poly" alt="Move South East" onclick="move()" onmouseover="setdir('South East')" title="Move South East" coords="68,66,125,90,125,124,94,124" />
+  <area shape="poly" alt="Move North East" onclick="move()" onmouseover="setdir('North East')" title="Move North East" coords="67,60,91,5,125,5,125,38" />
+  <area shape="poly" alt="Move West" onclick="move()" onmouseover="setdir('West')" title="Move West" coords="63,63,5,42,5,88" />
+  <area shape="poly" alt="Move South" onclick="move()" onmouseover="setdir('South')" title="Move South" coords="66,66,91,124,43,124" />
+  <area shape="poly" alt="Move East" onclick="move()" onmouseover="setdir('East')" title="Move East" coords="67,63,125,41,125,87" />
+  <area shape="poly" alt="Move North" onclick="move()" onmouseover="setdir('North')" title="Move North" coords="65,60,39,5,89,5" />
+</map>
+<br />Move:
+<br />
+<form name="compass" action="#" method ="POST" onsubmit="carrot()">
+    <input type="submit" name="direction" value="Direction?" disabled />
+</form>
+</div>
+<div style="color: red; text-align: center" id="warningdiv">Compass load delayed to prevent Power Clicking and reduce Server Load.</div>
+<table width="92" height="49" border="0">
+  <tr>
+    <td><form action="#" method="post">
+<input name="runon" type="submit" value="Walk" /> 
+</form></td>
+    <td><form action="#" method="post">
+<input name="runon" type="submit" value="Run" /> 
+</form></td>
+  </tr>
+</table>
+</center>
+</td></tr>
+</table>
+<table width="100%">
+<tr><td class="title"><img src="images/button_fastspells.gif" alt="Fast Spells" title="Fast Spells" /></td></tr>
+<tr><td>
+<a href="#">Heal</a><br /><a href="#">Revive</a><br /><a href="#">Life</a><br /><a href="#">Breath</a><br /><a href="#">Healing Armor</a><br />
+</td></tr>
+</table><br />
+<table width="100%">
+<tr><td class="title"><img src="images/button_towns.gif" alt="Towns" title="Towns" /></td></tr>
+<tr><td>
+<b>Welcome to Kingdom Of Valour.</b><br /><br />
+Your purchased Maps.<br />
+<p>Travel To:<br />
+<IMG SRC="images/icon_arrow.gif"> TP: 5 <a href="#">Kingdom Of Valour</a><br />
+<IMG SRC="images/icon_arrow.gif"> TP: 21 <a href="#">Raminant</a><br />
+<IMG SRC="images/icon_arrow.gif"> TP: 25 <a href="#">Brisbann Woods</a><br />
+<IMG SRC="images/icon_arrow.gif"> TP: 30 <a href="#">Nemarik</a><br />
+<IMG SRC="images/icon_arrow.gif"> TP: 60 <a href="#">Narcillas Port</a><br />
+<IMG SRC="images/icon_arrow.gif"> TP: 70 <a href="#">Abandoned Ruins</a><br />
+
+</td></tr>
+</table><br />
+</td>
+</tr>
+</table><br>
+<table class="copyright" width="100%"><tr>
+<td width="60%" align="center">Recommended for <a href="http://microsoft.com" target="_new">IE</a> and <a href="http://mozilla.org/products/firefox/" target="_new">Firefox</a> with Screen Resolution of 1024 x 768</td>
+<td width="40%" align="right"><a href="http://dkscript.com" target="_new">DK Script</a> &copy; 2004-2006 - Created by Adam Dear</td>
+</tr></table>
+
+</body>
+</html>
